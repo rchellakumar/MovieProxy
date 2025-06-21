@@ -55,7 +55,7 @@ app.get(/^\/api\/image\/(.+)$/, (req, res) => {
 
 
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Proxy server running at http://localhost:${PORT}`);
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Proxy server running at http://0.0.0.0:${PORT}`);
 });
